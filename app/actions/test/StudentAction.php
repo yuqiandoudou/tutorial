@@ -1,5 +1,5 @@
 <?php 
-use Phalcon\Mvc\View\Simple;
+//use Phalcon\Mvc\View\Simple;
 class StudentAction {
     protected $declareService;
     protected $declareRender;
@@ -37,6 +37,7 @@ class StudentAction {
             $serviceClass = explode("/", $serviceClass);
             $serviceClass = array_pop($serviceClass);
             $service = new $serviceClass();
+            $service->run();
             //$this-req里面是前端传过来的数据可以直接处理
             }     
     }
